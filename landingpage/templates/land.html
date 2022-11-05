@@ -1,0 +1,203 @@
+a
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    
+    <link rel="stylesheet" href="{% static 'css/land.css' %}" />
+    <title>FineCode - Landing Page</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light navbar-expand-md py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center logo-text" href="#"
+          ><span>FineCode</span></a
+        ><button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navcol-3"
+        >
+          <span class="visually-hidden">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navcol-3" class="collapse navbar-collapse">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Public Room</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Challenges</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+          </ul>
+          <a href="{% url 'classroom:home' %}"><button class="btn btn-primary btn-1" type="button">LOGIN</button></a>
+          <a href="{% url 'users:register' %}"><button class="btn btn-primary btn-2" type="button">SIGN UP</button></a>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid py-4 py-xl-0 main-cont">
+      <div class="row gy-4 gy-md-0">
+        <div
+          class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center"
+        >
+          <div style="max-width: 470px;" class="main-text py-5">
+            <h2>Compiler with <br />a brain.</h2>
+            <p class="my-2">
+              Join a code session room, Create your own or Find a public room
+              and code alongside coders from across the globe.
+            </p>
+            <div>
+            <form class="d-flex flex-wrap room-code" method="post">
+              <div class="mb-3 col-lg-4"><input class="form-control" type="text" name="text" placeholder="Room Code"/></div>
+              <div class="mb-3" ><button class="btn ms-0 join-room-button" style="margin:0;" type="submit">JOIN ROOM</button></div>
+              <div class="mb-3" ><button class="btn ms-0 create-room-button"  type="submit">CREATE ROOM</button></div>
+            </form>
+            
+          </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-xl-5 main-image" >
+            <img
+              src="{% static 'Images/main.png' %}"
+              height="530px"
+              width="500px" 
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="frame-div8">
+      <div class="frame-div9">
+        <div class="frame-div10">
+          <div class="build-div">
+            <span>You code while we </span
+            ><span class="analyse-span">analyse</span><span> it.</span>
+          </div>
+          <div class="finecode-uses-our-custom-made">
+            FineCode uses our custom made code analyser to analyse your code
+            and compare it with other on the basis of set parameters.
+          </div>
+        </div>
+      
+        <div class="frame-div11">
+          <div class="frame-div12">
+            <div class="approach-div">Approach</div>
+            <img class="vector-icon" alt="" src="{% static 'Images/vector-3.svg' %}" />
+            <div class="there-are-multiple-ways-to-sol">
+              <p class="compiler-with">
+                There are multiple ways to solve a problem and we analyse
+                which one you took and how it is compared
+              </p>
+              <p class="a-brain-p">to the others</p>
+            </div>
+            <img class="group-icon" alt="" src="{% static 'Images/group-91.svg' %}" />
+          </div>
+
+
+
+          <div class="frame-div12">
+            <div class="approach-div">Time and space</div>
+            <img class="vector-icon" alt="" src="{% static 'Images/vector-31.svg' %}" />
+            <div class="there-are-multiple-ways-to-sol">
+              We compare the code execution time and the space that the
+              program took. This helps in creating fast and tight programs
+            </div>
+            <img class="group-icon1" alt="" src="{% static 'Images/group-92.svg' %}" />
+          </div>
+
+
+          <div class="frame-div14">
+            <div class="plagarism-checker-div">Plagarism checker</div>
+            <img class="vector-icon2" alt="" src="{% static 'Images/vector-32.svg' %}" />
+            <div class="we-check-and-analyse-the-code">
+              <p class="compiler-with">
+                We check and analyse the code for any
+              </p>
+              <p class="a-brain-p">plagarism by scrapping the web</p>
+            </div>
+            <img class="group-icon2" alt="" src="{% static 'Images/group-90.svg' %}" />
+          </div>
+      </div>
+    </div>
+
+    <div class="frame-div15">
+      <div class="frame-div16">
+        <div class="build-div">FineCode</div>
+        <div class="frame-div17">
+          <div class="frame-div18">
+            <div class="frame-div19">
+              <div class="frame-div20">
+                <div class="an-colaborative-compiler-with">
+                  <span>An colaborative compiler with a </span
+                  ><span class="analyse-span">brain</span>
+                </div>
+              </div>
+              <div class="frame-div21">
+                <div class="subscribe"><button class="btn ms-0 join-room-button-footer" style="margin:0;" type="submit">JOIN ROOM</button></div >
+              </div>
+            </div>
+            <div class="frame-div22">
+              <div class="frame-div23">
+                <div class="public-rooms-div"><a href="#" class="footer-links">Sessions</a></div>
+                <div class="frame-div24">
+                  <div class="our-story-div"><a href="#" class="footer-links">Join</a></div>
+                  <div class="our-story-div"><a href="#" class="footer-links">Create</a></div>
+                  <div class="our-story-div"><a href="#" class="footer-links">Public room</a></div>
+                  <div class="our-story-div"><a href="#" class="footer-links">Challenges</a></div>
+                </div>
+              </div>
+              <div class="frame-div23">
+                <div class="public-rooms-div"><a href="#" class="footer-links">About</a></div>
+                <div class="frame-div24">
+                  <div class="our-story-div"><a href="#" class="footer-links">Contact us</a></div>
+                  <div class="our-story-div"><a href="#" class="footer-links">Terms & Conditions</a></div>
+                  <div class="our-story-div"><a href="#" class="footer-links">Privacy Policies</a></div>
+                </div>
+              </div>
+              <div class="frame-div23">
+                <div class="public-rooms-div"><a href="#" class="footer-links">Socials</a></div>
+                <div class="frame-div24">
+                  <div class="our-story-div"><a href="#" class="footer-links">Instagram</a></div>
+                  <div class="our-story-div"><a href="#" class="footer-links">Twitter</a></div>
+                  <div class="our-story-div"><a href="#" class="footer-links">Youtube</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="frame-div29">
+            <img class="vector-icon3" alt="" src="{% static 'Images/vector-4.svg' %}" />
+            <div class="row-3-div">
+              <div class="frame-div30">
+                <div class="terms-conditions">
+                  Made with Love by Hash Society
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
