@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <div class="row">
+          {% for ass in assignment.submitted_assignments %}
+          <img src="{{ ass.user.profile.image.url }}" width="35" height="35" alt="..." class="rounded-circle mr-2 mb-2 float-left">
+          <p class="pt-2">{{ submit_assignment.user.first_name }} {{submit_assignment.user.last_name}}</p>
+          {% endfor %}
+     {{assignment_files}}
+     {% for file in assignment_files %}
+     <h5 class="card-title">{{ file.filename }}</h5>
+     {{ file.files.url }}
+     {% endfor %}
+</body>
+</html>

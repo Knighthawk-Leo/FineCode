@@ -57,6 +57,7 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                                 <a class="dropdown-item" href="{% url 'assignments:grade' assignment.pk %}">Grade Student</a>
+                                <a class="dropdown-item" href="{% url 'assignments:analyze' assignment.pk %}">Analyze Code</a>
                             </div>
                         </div>
                         
@@ -76,5 +77,4 @@
             </div>
         {% endfor %}
     </div>
-
 {% endblock content %}
