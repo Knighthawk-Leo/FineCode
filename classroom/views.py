@@ -243,6 +243,8 @@ def classwork(request, pk):
 def student_work(request, pk):
     assignment = get_object_or_404(Assignment, pk=pk)
     context = {'assignment': assignment}
+    for x in range(10):
+        print(context)
     return render(request, 'classroom/student_work.html', context)
 
 
