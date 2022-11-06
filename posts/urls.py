@@ -5,5 +5,5 @@ app_name = 'posts'
 
 urlpatterns = [
     path('create/<int:pk>/', views.create_post, name='create_post'),
-    
+    path('analyze/', views.analyze, name='analyze')
 ]

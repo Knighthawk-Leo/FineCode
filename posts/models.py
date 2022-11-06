@@ -107,7 +107,7 @@ class AssignmentFile(models.Model):
 
 
 class Resource(models.Model):
-    files = models.FileField(upload_to='classroom/resources/')
+    files = models.FileField(upload_to='codes/')
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
 
     @property

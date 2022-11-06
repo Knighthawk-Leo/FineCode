@@ -246,3 +246,11 @@ def student_work(request, pk):
     return render(request, 'classroom/student_work.html', context)
 
 
+import os
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+def analyze(request):
+    from .codes import test
+    a=[obj for obj in dir(test) if not obj.startswith('__')]
+    print(a)

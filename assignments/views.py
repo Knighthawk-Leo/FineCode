@@ -45,11 +45,11 @@ def analyze(request,pk):
     assignment = get_object_or_404(Assignment, pk=pk)
     submit_assignment = get_object_or_404(SubmittedAssignment, pk=pk)
     assignment_files = submit_assignment.assignmentfile_set.all()
-    
+
     context = {
         'submit_assignment':submit_assignment,
         'assignment_files':assignment_files,
         'assignment':assignment,
     }
-    # print(type(assignment_files))
+    
     return render(request, 'assignments/analyze.html', context)
